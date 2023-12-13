@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-[*Home Page*](https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/3495f110/) - [*GitHub*](https://github.com/paulopgw/mywebsite) - [*Resume*](file:///Users/paulinalopez/Downloads/PaulinaLopezfelix_resume%20(1).html)
+[*Home Page*](https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/3495f110/) - [*GitHub*](https://github.com/paulopgw/mywebsite)
 
 ## Freudian Analysis of The Little Mermaid
 

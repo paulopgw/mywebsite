@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Home Page</title>
+<title>census-map</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,16 +23,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="Index_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Index_files/libs/quarto-html/quarto.js"></script>
-<script src="Index_files/libs/quarto-html/popper.min.js"></script>
-<script src="Index_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="Index_files/libs/quarto-html/anchor.min.js"></script>
-<link href="Index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="Index_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="Index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="Census Map_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Census Map_files/libs/quarto-html/quarto.js"></script>
+<script src="Census Map_files/libs/quarto-html/popper.min.js"></script>
+<script src="Census Map_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Census Map_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Census Map_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Census Map_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Census Map_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Census Map_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Census Map_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -43,51 +43,43 @@ ul.task-list li input[type="checkbox"] {
 
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Home Page</h1>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<p><a href="https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/7b6fe232/"><em>Home Page</em></a> - <a href="https://github.com/paulopgw"><em>GitHub</em></a></p>
-<section id="hello-my-name-is-paulina-lopez." class="level1">
-<h1>Hello! My name is Paulina Lopez.</h1>
-<p>I am a recent college graduate from George Washington University. I have a bachelor degree in Organizational Science, and a minor in Journalism and Mass Communication.</p>
-<p><img src="DSC02177%202.jpg" class="img-fluid"></p>
-<section id="essay-sample" class="level2">
-<h2 class="anchored" data-anchor-id="essay-sample"><a href="https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/00ece61c/">Essay Sample</a></h2>
-</section>
-<section id="interactive-county-census" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-county-census"><a href="https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/0387c424/">Interactive County Census</a></h2>
-</section>
-<section id="news-story-sample" class="level2">
-<h2 class="anchored" data-anchor-id="news-story-sample"><a href="https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/30e57b47/">News Story Sample</a></h2>
-</section>
-<section id="contact-information" class="level2">
-<h2 class="anchored" data-anchor-id="contact-information">Contact Information:</h2>
-<p>202-714-2638</p>
-<p>paulinalopezfe@gmail.com</p>
-</section>
-<section id="resume" class="level2">
-<h2 class="anchored" data-anchor-id="resume">Resume</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.linkedin.com/in/paulina-lopez-a463671a2/"><embed src="PaulinaLopezfelix_resume%20(1).pdf" class="img-fluid"></a></p>
-</figure>
-</div>
-</section>
-</section>
+<p><a href="https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/3495f110/"><em>Home Page</em></a> - <a href="https://github.com/paulopgw/mywebsite"><em>GitHub</em></a></p>
+<p>Together we will be creating an interactive county census from the ACS.</p>
+<p>First, we need to load the necessary programs that will help us complete our census.</p>
+<p>(Make sure your packages are downloaded first)</p>
+<p><code>library(tidyverse)</code></p>
+<p><code>library(tidycensus)</code></p>
+<p><code>library(sf)</code></p>
+<p><code>library(htmltools)</code></p>
+<p><code>library(janitor)</code></p>
+<p><code>library(here)</code></p>
+<p><code>library(mapview)</code></p>
+<p><code>library(leafsync)</code></p>
+<p><code>library(leaflet.extras2)</code></p>
+<p>Then, we need to set up an API Key in order to access the database for the data needed.</p>
+<p>To do this, access the following website:</p>
+<p><a href="https://api.census.gov/data/key_signup.html" class="uri">https://api.census.gov/data/key_signup.html</a></p>
+<p>After you receive your key in the mail, you will type in the following code:</p>
+<p>(Remember to place your key into “YOUR API KEY”)</p>
+<p><code>myapikey &lt;- "YOUR API KEY"</code></p>
+<p><code>census_api_key(myapikey, overwrite=TRUE)</code></p>
+<p>Now, we want to pull the data we want and rename it. In this case, we are looking for total population, median income, and median age. The numbers they equal to are the variable associated with the data we want to pull.</p>
+<p><code>myvars &lt;- c(totalpop = "B01003_001",</code></p>
+<p><code>medincome = "B19013_001",</code></p>
+<p><code>medage = "B01002_001")</code></p>
+<p>Now, we look for the state we want, and what geographical feature. In this case, we want its counties, and we want its “geometry” data the program needs to create the map.</p>
+<p><code>ma_counties_withgeo &lt;- get_acs(geography = "county", variables = c(myvars), state = "MA", output = "wide", geometry = TRUE)</code></p>
+<p>Finally, with different variables and the geographical data in place, we choose what we want the map to show. In this case, we want to see the median income, which in the table presented is named as “medincomeE”.</p>
+<p><code>mapview(ma_counties_withgeo, zcol = "medincomeE")</code></p>
+<p>Now, if we want to label the map, we must use the following code.</p>
+<p><code>mylabel &lt;- glue::glue("County: {{ma_counties_withgeo$NAME}}&lt;br&gt;",  "Median Income: {{ma_counties_withgeo$medincomeE}}")</code></p>
+<p>We want to also label the pop outs.</p>
+<p><code>mypopup &lt;- glue::glue("County: {ma_counties_withgeo$NAME}&lt;br&gt;",  "Median Income: {ma_counties_withgeo$medincomeE}")</code></p>
+<p>Finally, to visualize the map with the labels, we need to tell it to use it in the final render:</p>
+<p><code>mapview(ma_counties_withgeo, zcol = "medincomeE", labels = mylabel, popup = mypopup)</code></p>
+<p>To see the process and the finalized map, click <a href="https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/bec5986e/">here</a></p>
 
 </main>
 <!-- /main column -->
