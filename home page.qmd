@@ -16,7 +16,7 @@ I am a recent college graduate from George Washington University. I have a bache
 
 ## [Interactive County Census](https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/0387c424/)
 
-## [News Story Sample](https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/ed943b38/)
+## [News Story Sample](https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/dec50f11/)
 
 Contact Information:
 
@@ -26,4 +26,4 @@ paulinalopezfe\@gmail.com
 
 ## Resume
 
-[![](PaulinaLopezfelix_resume%20(1).pdf){fig-align="center"}](https://www.linkedin.com/in/paulina-lopez-a463671a2/)
+[![](PaulinaLopezfelix_resume%20(1).pdf){fig-align="center"}](https://www.linkedin.com/in/paulina-lopez-a463671a2/) \##
