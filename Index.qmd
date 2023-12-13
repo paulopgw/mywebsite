@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-[*Home Page*](https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/3495f110/)  - [*GitHub*](https://github.com/paulopgw/mywebsite)  - [*Resume*](file:///Users/paulinalopez/Downloads/PaulinaLopezfelix_resume%20(1).html)
+[*Home Page*](https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/3495f110/) - [*GitHub*](https://github.com/paulopgw/mywebsite) - [*Resume*](file:///Users/paulinalopez/Downloads/PaulinaLopezfelix_resume%20(1).html)
 
 # Hello! My name is Paulina Lopez.
 
@@ -14,7 +14,7 @@ I am a recent college graduate from George Washington University. I have a bache
 
 ## News Analysis
 
-## [Essay Sample](https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/10f8736c/)
+## [Essay Sample](https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/159eeab0/)
 
 ## [News Story Sample](https://109c7fdfde49495f9a447f4665fac5f5.app.posit.cloud/p/41b3d8ba/)
 
